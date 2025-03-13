@@ -45,3 +45,10 @@ services:
       - ${USERDATA}/pb7/caches:/app/pb7/caches                                        # Caches for PB7
       - ${USERDATA}/pb7/optimize_results:/app/pb7/optimize_results                    # Optimization results for PB7
       - ${USERDATA}/pb7/optimize_results_analysis:/app/pb7/optimize_results_analysis  # Analysis of optimization results for PB7
+    networks:
+      - coolify  # Подключение к существующей сети
+
+
+networks:
+  coolify:
+    external: true
