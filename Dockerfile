@@ -2,8 +2,7 @@
 FROM halfbax/passivbot:1.1.0
 
 # Install necessary dependencies
-RUN apt-get update && apt-get install -y git && apt-get clean && \
-    rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get install -y git && apt-get clean
 
 # Copy your entrypoint script into the container
 COPY base/src/entrypoint.sh /usr/local/bin/entrypoint.sh
